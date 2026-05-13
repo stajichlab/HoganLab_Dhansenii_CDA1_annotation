@@ -1,0 +1,58 @@
+==================================================
+file name: CDA1_20250504.fa         
+sequences:             8
+total length:   12390982 bp  (12390982 bp excl N/X-runs)
+GC level:         36.37 %
+bases masked:     696858 bp ( 5.62 %)
+==================================================
+               number of      length   percentage
+               elements*    occupied  of sequence
+--------------------------------------------------
+Retroelements          298       225575 bp    1.82 %
+   SINEs:                0            0 bp    0.00 %
+   Penelope:             0            0 bp    0.00 %
+   LINEs:                5          252 bp    0.00 %
+    CRE/SLACS            2          124 bp    0.00 %
+     L2/CR1/Rex          0            0 bp    0.00 %
+     R1/LOA/Jockey       0            0 bp    0.00 %
+     R2/R4/NeSL          0            0 bp    0.00 %
+     RTE/Bov-B           0            0 bp    0.00 %
+     L1/CIN4             0            0 bp    0.00 %
+   LTR elements:       293       225323 bp    1.82 %
+     BEL/Pao             0            0 bp    0.00 %
+     Ty1/Copia         172       119346 bp    0.96 %
+     Gypsy/DIRS1        62        91997 bp    0.74 %
+       Retroviral        0            0 bp    0.00 %
+
+DNA transposons         29        14475 bp    0.12 %
+   hobo-Activator        2          137 bp    0.00 %
+   Tc1-IS630-Pogo        3          211 bp    0.00 %
+   En-Spm                0            0 bp    0.00 %
+   MULE-MuDR             0            0 bp    0.00 %
+   PiggyBac              0            0 bp    0.00 %
+   Tourist/Harbinger     2          147 bp    0.00 %
+   Other (Mirage,        0            0 bp    0.00 %
+    P-element, Transib)
+
+Rolling-circles          0            0 bp    0.00 %
+
+Unclassified:          598       315593 bp    2.55 %
+
+Total interspersed repeats:      555643 bp    4.48 %
+
+
+Small RNA:             128        31979 bp    0.26 %
+
+Satellites:              0            0 bp    0.00 %
+Simple repeats:       2012        95128 bp    0.77 %
+Low complexity:        293        14108 bp    0.11 %
+==================================================
+
+* most repeats fragmented by insertions or deletions
+  have been counted as one element
+                                                      
+
+                                                                                  
+run with rmblastn version 2.14.1+
+The query was compared to classified sequences in ".../CDA1-families.fa"
+FamDB: 
