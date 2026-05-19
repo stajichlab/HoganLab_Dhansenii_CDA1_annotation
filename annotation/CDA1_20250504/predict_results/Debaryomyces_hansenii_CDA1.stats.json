@@ -1,0 +1,121 @@
+{
+    "format": "annotation",
+    "command": "/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/funannotate predict --keep_no_stops --SeqCenter DHMC -i input_clean_genomes/CDA1_20250504.masked.fasta -o annotation/CDA1_20250504 -s Debaryomyces hansenii --strain CDA1 --AUGUSTUS_CONFIG_PATH /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/config/ --cpus 24 --min_training_models 50 --max_intronlen 1200 --name AC24UF --min_protlen 30 --tmpdir /scratch/jstajich/24134752 --busco_db saccharomycetes_odb10 --table 12",
+    "organism": "Debaryomyces_hansenii_CDA1",
+    "software": {
+        "name": "funannotate",
+        "version": "1.8.17",
+        "date": "2026-05-14",
+        "resources": {
+            "merops": {
+                "type": "diamond",
+                "version": "12.5",
+                "date": "2023-01-19",
+                "num-records": "5098"
+            },
+            "uniprot": {
+                "type": "diamond",
+                "version": "2025_04",
+                "date": "2025-10-08",
+                "num-records": "573661"
+            },
+            "dbCAN": {
+                "type": "hmmer3",
+                "version": "14.0",
+                "date": "2025-08-26",
+                "num-records": "699"
+            },
+            "pfam": {
+                "type": "hmmer3",
+                "version": "38.0",
+                "date": "2025-07",
+                "num-records": "25545"
+            },
+            "repeats": {
+                "type": "diamond",
+                "version": "1.0",
+                "date": "2025-01-21",
+                "num-records": "11950"
+            },
+            "go": {
+                "type": "text",
+                "version": "2025-06-01",
+                "date": "2025-06-01",
+                "num-records": "48101"
+            },
+            "mibig": {
+                "type": "diamond",
+                "version": "1.4",
+                "date": "2025-01-21",
+                "num-records": "31023"
+            },
+            "interpro": {
+                "type": "xml",
+                "version": "105.0",
+                "date": "2025-04-24",
+                "num-records": "48003"
+            },
+            "busco_outgroups": {
+                "type": "outgroups",
+                "version": "1.0",
+                "date": "2025-06-10",
+                "num-records": "8"
+            },
+            "gene2product": {
+                "type": "text",
+                "version": "1.97",
+                "date": "2025-08-05",
+                "num-records": "34471"
+            }
+        }
+    },
+    "assembly": {
+        "num_contigs": 8,
+        "length": 12390982,
+        "mean_length": 1548872.75,
+        "N50": 2025950,
+        "L50": 3,
+        "N90": 1339928,
+        "L90": 7,
+        "GC_content": 36.37
+    },
+    "annotation": {
+        "genes": 6258,
+        "common_name": 0,
+        "mRNA": 6035,
+        "tRNA": 223,
+        "ncRNA": 0,
+        "rRNA": 0,
+        "avg_gene_length": 1424.81,
+        "transcript-level": {
+            "CDS_transcripts": 6035,
+            "CDS_five_utr": 0,
+            "CDS_three_utr": 0,
+            "CDS_no_utr": 6035,
+            "CDS_five_three_utr": 0,
+            "CDS_complete": 6034,
+            "CDS_no-start": 1,
+            "CDS_no-stop": 0,
+            "CDS_no-start_no-stop": 0,
+            "total_exons": 6524,
+            "total_cds_exons": 6524,
+            "multiple_exon_transcript": 440,
+            "single_exon_transcript": 5595,
+            "avg_exon_length": 0,
+            "avg_protein_length": 487.09,
+            "functional": {
+                "go_terms": 0,
+                "interproscan": 0,
+                "eggnog": 0,
+                "pfam": 0,
+                "cazyme": 0,
+                "merops": 0,
+                "busco": 0,
+                "secretion": 0
+            },
+            "avg_exon_lenth": 459.17,
+            "pct_exon_overlap_transcript_evidence": 41.46,
+            "pct_exon_overlap_protein_evidence": 12.91
+        }
+    }
+}
