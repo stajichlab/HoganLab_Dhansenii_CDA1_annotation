@@ -1,0 +1,12 @@
+[05/13/26 13:21:08]: /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/aux_scripts/trinity.py -f annotation/CDA1_20250504/training/genome.fasta -o annotation/CDA1_20250504/training/trinity.fasta -b annotation/CDA1_20250504/training/hisat2.coordSorted.bam -t annotation/CDA1_20250504/training --stranded no --max_intronlen 3000 --cpus 16 --TRINITYHOME /opt/linux/rocky/8.x/x86_64/pkgs/trinity-rnaseq/2.15.1 --memory 24G --logfile annotation/CDA1_20250504/logfiles/funannotate-trinity.log --jaccard_clip -l annotation/CDA1_20250504/training/normalize/left.norm.fq -r annotation/CDA1_20250504/training/normalize/right.norm.fq --no-progress
+
+[05/13/26 13:21:08]: Building Hisat2 genome index
+[05/13/26 13:21:08]: hisat2-build -p 16 annotation/CDA1_20250504/training/genome.fasta annotation/CDA1_20250504/training/hisat2.genome
+[05/13/26 13:21:13]: Aligning reads to genome using Hisat2
+[05/13/26 13:21:13]: hisat2 -p 16 --max-intronlen 3000 --dta -x annotation/CDA1_20250504/training/hisat2.genome -1 /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/normalize/left.norm.fq -2 /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/normalize/right.norm.fq | samtools sort --reference annotation/CDA1_20250504/training/genome.fasta -@ 8 -o annotation/CDA1_20250504/training/hisat2.coordSorted.bam -
+[05/13/26 13:23:29]: Running genome-guided Trinity, logfile: annotation/CDA1_20250504/training/Trinity-gg.log
+[05/13/26 13:23:29]: Clustering of reads from BAM and preparing assembly commands
+[05/13/26 13:23:29]: Trinity --no_distributed_trinity_exec --genome_guided_bam annotation/CDA1_20250504/training/hisat2.coordSorted.bam --genome_guided_max_intron 3000 --CPU 16 --max_memory 24G --output annotation/CDA1_20250504/training/trinity_gg --jaccard_clip
+[05/13/26 13:28:37]: Assembling 4,120 Trinity clusters using 15 CPUs
+[05/13/26 15:00:30]: perl /opt/linux/rocky/8.x/x86_64/pkgs/trinity-rnaseq/2.15.1/util/support_scripts/GG_partitioned_trinity_aggregator.pl Trinity_GG
+[05/13/26 15:00:49]: 12,794 transcripts derived from Trinity

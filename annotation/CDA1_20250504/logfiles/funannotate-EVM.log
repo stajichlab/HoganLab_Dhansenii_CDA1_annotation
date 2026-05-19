@@ -1,0 +1,286 @@
+[05/14/26 19:45:47]: /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/aux_scripts/funannotate-runEVM.py -w /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/weights.evm.txt -c 24 -g /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/gene_predictions.gff3 -d /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM -f /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/genome.softmasked.fa -l annotation/CDA1_20250504/logfiles/funannotate-EVM.log -m 10 -i 1500 -o /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/evm.round1.gff3 --EVM_HOME /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/opt/evidencemodeler-1.1.1 -p /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/protein_alignments.gff3 -t /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/transcript_alignments.gff3
+
+[05/14/26 19:45:50]: EVM: partitioning input to ~ 35 genes per partition using min 1500 bp interval
+[05/14/26 19:45:51]: 8 total contigs; skipping 0 contigs with no genes
+[05/14/26 19:45:51]: Merged 32055 genes into 4288 supergenes with bedtools
+[05/14/26 19:45:51]: scaf1_1-93557 --> 93556 bp
+[05/14/26 19:45:51]: scaf1_91918-189042 --> 97124 bp
+[05/14/26 19:45:51]: scaf1_184029-243962 --> 59933 bp
+[05/14/26 19:45:51]: scaf1_240719-368233 --> 127514 bp
+[05/14/26 19:45:51]: scaf1_365897-447056 --> 81159 bp
+[05/14/26 19:45:51]: scaf1_445496-550948 --> 105452 bp
+[05/14/26 19:45:51]: scaf1_549399-625721 --> 76322 bp
+[05/14/26 19:45:51]: scaf1_623376-737356 --> 113980 bp
+[05/14/26 19:45:51]: scaf1_735137-806947 --> 71810 bp
+[05/14/26 19:45:51]: scaf1_805098-939535 --> 134437 bp
+[05/14/26 19:45:51]: scaf1_932304-1000515 --> 68211 bp
+[05/14/26 19:45:51]: scaf1_998141-1138195 --> 140054 bp
+[05/14/26 19:45:51]: scaf1_1136681-1238369 --> 101688 bp
+[05/14/26 19:45:51]: scaf1_1236623-1339928 --> 103305 bp
+[05/14/26 19:45:51]: scaf2_1-116952 --> 116951 bp
+[05/14/26 19:45:51]: scaf2_109606-213730 --> 104124 bp
+[05/14/26 19:45:51]: scaf2_210233-283982 --> 73749 bp
+[05/14/26 19:45:51]: scaf2_282437-390830 --> 108393 bp
+[05/14/26 19:45:51]: scaf2_384975-465833 --> 80858 bp
+[05/14/26 19:45:51]: scaf2_461421-571136 --> 109715 bp
+[05/14/26 19:45:51]: scaf2_569151-644862 --> 75711 bp
+[05/14/26 19:45:51]: scaf2_640261-772119 --> 131858 bp
+[05/14/26 19:45:51]: scaf2_767852-868588 --> 100736 bp
+[05/14/26 19:45:51]: scaf2_864773-967213 --> 102440 bp
+[05/14/26 19:45:51]: scaf2_964354-1083311 --> 118957 bp
+[05/14/26 19:45:51]: scaf2_1081516-1195756 --> 114240 bp
+[05/14/26 19:45:51]: scaf2_1193592-1278790 --> 85198 bp
+[05/14/26 19:45:51]: scaf2_1276894-1385105 --> 108211 bp
+[05/14/26 19:45:51]: scaf3_1-119826 --> 119825 bp
+[05/14/26 19:45:51]: scaf3_114965-162442 --> 47477 bp
+[05/14/26 19:45:51]: scaf3_159707-279876 --> 120169 bp
+[05/14/26 19:45:51]: scaf3_277979-340107 --> 62128 bp
+[05/14/26 19:45:51]: scaf3_335362-482101 --> 146739 bp
+[05/14/26 19:45:51]: scaf3_475920-591178 --> 115258 bp
+[05/14/26 19:45:51]: scaf3_584542-660159 --> 75617 bp
+[05/14/26 19:45:51]: scaf3_657341-755322 --> 97981 bp
+[05/14/26 19:45:51]: scaf3_752885-904164 --> 151279 bp
+[05/14/26 19:45:51]: scaf3_901921-992910 --> 90989 bp
+[05/14/26 19:45:51]: scaf3_989536-1087395 --> 97859 bp
+[05/14/26 19:45:51]: scaf3_1084211-1169844 --> 85633 bp
+[05/14/26 19:45:51]: scaf3_1168105-1291955 --> 123850 bp
+[05/14/26 19:45:51]: scaf3_1290210-1394308 --> 104098 bp
+[05/14/26 19:45:51]: scaf3_1391746-1508688 --> 116942 bp
+[05/14/26 19:45:51]: scaf3_1505288-1604631 --> 99343 bp
+[05/14/26 19:45:51]: scaf4_1-71174 --> 71173 bp
+[05/14/26 19:45:51]: scaf4_68517-189918 --> 121401 bp
+[05/14/26 19:45:51]: scaf4_185657-290739 --> 105082 bp
+[05/14/26 19:45:51]: scaf4_288980-361178 --> 72198 bp
+[05/14/26 19:45:51]: scaf4_358834-459575 --> 100741 bp
+[05/14/26 19:45:51]: scaf4_457058-559226 --> 102168 bp
+[05/14/26 19:45:51]: scaf4_557469-635576 --> 78107 bp
+[05/14/26 19:45:51]: scaf4_631831-712251 --> 80420 bp
+[05/14/26 19:45:51]: scaf4_710086-867787 --> 157701 bp
+[05/14/26 19:45:51]: scaf4_865643-1000267 --> 134624 bp
+[05/14/26 19:45:51]: scaf4_998758-1082111 --> 83353 bp
+[05/14/26 19:45:51]: scaf4_1077217-1173605 --> 96388 bp
+[05/14/26 19:45:51]: scaf4_1167701-1265412 --> 97711 bp
+[05/14/26 19:45:51]: scaf4_1260115-1368256 --> 108141 bp
+[05/14/26 19:45:51]: scaf4_1366508-1452577 --> 86069 bp
+[05/14/26 19:45:51]: scaf4_1450738-1547416 --> 96678 bp
+[05/14/26 19:45:51]: scaf5_1-74604 --> 74603 bp
+[05/14/26 19:45:51]: scaf5_72272-182212 --> 109940 bp
+[05/14/26 19:45:51]: scaf5_175176-251242 --> 76066 bp
+[05/14/26 19:45:51]: scaf5_246927-377515 --> 130588 bp
+[05/14/26 19:45:51]: scaf5_374025-457251 --> 83226 bp
+[05/14/26 19:45:51]: scaf5_453810-545571 --> 91761 bp
+[05/14/26 19:45:51]: scaf5_539777-633974 --> 94197 bp
+[05/14/26 19:45:51]: scaf5_627913-727955 --> 100042 bp
+[05/14/26 19:45:51]: scaf5_721127-818827 --> 97700 bp
+[05/14/26 19:45:51]: scaf5_817000-913705 --> 96705 bp
+[05/14/26 19:45:51]: scaf5_906351-959319 --> 52968 bp
+[05/14/26 19:45:51]: scaf5_957373-1122819 --> 165446 bp
+[05/14/26 19:45:51]: scaf5_1117600-1220762 --> 103162 bp
+[05/14/26 19:45:51]: scaf5_1217851-1355430 --> 137579 bp
+[05/14/26 19:45:51]: scaf5_1352455-1460201 --> 107746 bp
+[05/14/26 19:45:51]: scaf5_1454129-1595336 --> 141207 bp
+[05/14/26 19:45:51]: scaf5_1593394-1672312 --> 78918 bp
+[05/14/26 19:45:51]: scaf5_1665894-1758871 --> 92977 bp
+[05/14/26 19:45:51]: scaf5_1754320-1838244 --> 83924 bp
+[05/14/26 19:45:51]: scaf5_1833140-2025950 --> 192810 bp
+[05/14/26 19:45:51]: scaf6_1-103657 --> 103656 bp
+[05/14/26 19:45:51]: scaf6_100278-203854 --> 103576 bp
+[05/14/26 19:45:51]: scaf6_200915-314070 --> 113155 bp
+[05/14/26 19:45:51]: scaf6_310010-412411 --> 102401 bp
+[05/14/26 19:45:51]: scaf6_408824-497394 --> 88570 bp
+[05/14/26 19:45:51]: scaf6_494954-588563 --> 93609 bp
+[05/14/26 19:45:51]: scaf6_583914-679342 --> 95428 bp
+[05/14/26 19:45:51]: scaf6_677655-760687 --> 83032 bp
+[05/14/26 19:45:51]: scaf6_757561-844981 --> 87420 bp
+[05/14/26 19:45:51]: scaf6_842879-972212 --> 129333 bp
+[05/14/26 19:45:51]: scaf6_964301-1070460 --> 106159 bp
+[05/14/26 19:45:51]: scaf6_1068837-1137795 --> 68958 bp
+[05/14/26 19:45:51]: scaf6_1135285-1225325 --> 90040 bp
+[05/14/26 19:45:51]: scaf6_1222904-1321431 --> 98527 bp
+[05/14/26 19:45:51]: scaf6_1319898-1393613 --> 73715 bp
+[05/14/26 19:45:51]: scaf6_1391130-1471088 --> 79958 bp
+[05/14/26 19:45:51]: scaf6_1469235-1572592 --> 103357 bp
+[05/14/26 19:45:51]: scaf6_1570934-1656213 --> 85279 bp
+[05/14/26 19:45:51]: scaf6_1652071-1735034 --> 82963 bp
+[05/14/26 19:45:51]: scaf6_1733203-1849373 --> 116170 bp
+[05/14/26 19:45:51]: scaf6_1846474-1957633 --> 111159 bp
+[05/14/26 19:45:51]: scaf6_1951648-2056419 --> 104771 bp
+[05/14/26 19:45:51]: scaf6_2044799-2176186 --> 131387 bp
+[05/14/26 19:45:51]: scaf6_2173457-2258146 --> 84689 bp
+[05/14/26 19:45:51]: scaf6_2251572-2365487 --> 113915 bp
+[05/14/26 19:45:51]: scaf7_1-114243 --> 114242 bp
+[05/14/26 19:45:51]: scaf7_110975-204091 --> 93116 bp
+[05/14/26 19:45:51]: scaf7_200918-310461 --> 109543 bp
+[05/14/26 19:45:51]: scaf7_308382-428089 --> 119707 bp
+[05/14/26 19:45:51]: scaf7_424990-518162 --> 93172 bp
+[05/14/26 19:45:51]: scaf7_515821-601585 --> 85764 bp
+[05/14/26 19:45:51]: scaf7_599574-722578 --> 123004 bp
+[05/14/26 19:45:51]: scaf7_716290-803192 --> 86902 bp
+[05/14/26 19:45:51]: scaf7_791633-885483 --> 93850 bp
+[05/14/26 19:45:51]: scaf7_882676-978941 --> 96265 bp
+[05/14/26 19:45:51]: scaf7_976606-1088168 --> 111562 bp
+[05/14/26 19:45:51]: scaf7_1084495-1194483 --> 109988 bp
+[05/14/26 19:45:51]: scaf7_1190915-1253835 --> 62920 bp
+[05/14/26 19:45:51]: scaf7_1249482-1395206 --> 145724 bp
+[05/14/26 19:45:51]: scaf7_1393247-1461769 --> 68522 bp
+[05/14/26 19:45:51]: scaf7_1458936-1581907 --> 122971 bp
+[05/14/26 19:45:51]: scaf7_1576921-1689185 --> 112264 bp
+[05/14/26 19:45:51]: scaf7_1685015-1720016 --> 35001 bp
+[05/14/26 19:45:51]: scaf7_1714056-1877761 --> 163705 bp
+[05/14/26 19:45:51]: scaf7_1876132-1990680 --> 114548 bp
+[05/14/26 19:45:51]: scaf7_1987065-2094159 --> 107094 bp
+[05/14/26 19:45:51]: scafMT --> 28306 bp
+[05/14/26 19:45:55]: Finished partitioning, generating command list
+[05/14/26 19:50:39]: perl /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/opt/evidencemodeler-1.1.1/EvmUtils/recombine_EVM_partial_outputs.pl --partitions partitions_list.out --output_file_name evm.out
+[05/14/26 19:50:42]: Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_1081516-1195756/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_964354-1083311/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_569151-644862/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_109606-213730/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_640261-772119/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_1193592-1278790/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_1-116952/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_461421-571136/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_210233-283982/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_1276894-1385105/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_282437-390830/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_384975-465833/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_864773-967213/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/scaf2_767852-868588/evm.out
+	writing output /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1576921-1689185/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_515821-601585/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1249482-1395206/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_599574-722578/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1714056-1877761/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_976606-1088168/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_882676-978941/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1393247-1461769/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1084495-1194483/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_308382-428089/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1-114243/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1876132-1990680/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_200918-310461/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_110975-204091/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1987065-2094159/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1458936-1581907/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1190915-1253835/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_424990-518162/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_791633-885483/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_1685015-1720016/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/scaf7_716290-803192/evm.out
+	writing output /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_1290210-1394308/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_114965-162442/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_335362-482101/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_1505288-1604631/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_1168105-1291955/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_752885-904164/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_1-119826/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_475920-591178/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_584542-660159/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_1084211-1169844/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_901921-992910/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_989536-1087395/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_657341-755322/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_277979-340107/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_159707-279876/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/scaf3_1391746-1508688/evm.out
+	writing output /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_1136681-1238369/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_1-93557/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_549399-625721/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_805098-939535/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_623376-737356/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_998141-1138195/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_445496-550948/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_240719-368233/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_1236623-1339928/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_91918-189042/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_365897-447056/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_184029-243962/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_735137-806947/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/scaf1_932304-1000515/evm.out
+	writing output /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_175176-251242/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1352455-1460201/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_906351-959319/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1833140-2025950/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_72272-182212/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1117600-1220762/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1665894-1758871/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_539777-633974/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1593394-1672312/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1454129-1595336/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_627913-727955/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1754320-1838244/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_957373-1122819/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1-74604/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_817000-913705/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_246927-377515/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_721127-818827/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_1217851-1355430/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_453810-545571/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/scaf5_374025-457251/evm.out
+	writing output /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_710086-867787/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_185657-290739/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_1450738-1547416/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_288980-361178/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_68517-189918/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_631831-712251/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_998758-1082111/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_865643-1000267/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_1366508-1452577/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_457058-559226/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_1167701-1265412/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_1260115-1368256/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_358834-459575/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_557469-635576/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_1-71174/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/scaf4_1077217-1173605/evm.out
+	writing output /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_2251572-2365487/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1135285-1225325/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_583914-679342/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_310010-412411/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_200915-314070/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1652071-1735034/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1391130-1471088/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1570934-1656213/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1733203-1849373/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_100278-203854/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_2173457-2258146/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_677655-760687/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1469235-1572592/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1-103657/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_2044799-2176186/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1068837-1137795/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_757561-844981/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_964301-1070460/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1951648-2056419/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_408824-497394/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1222904-1321431/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_842879-972212/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1319898-1393613/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_1846474-1957633/evm.out
+Parsing /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/scaf6_494954-588563/evm.out
+	writing output /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6/evm.out
+
+
+[05/14/26 19:50:42]: perl /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/opt/evidencemodeler-1.1.1/EvmUtils/convert_EVM_outputs_to_GFF3.pl --partitions partitions_list.out --output evm.out --genome /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/genome.softmasked.fa
+[05/14/26 19:50:43]: // Processing scaf2, /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf2
+// Processing scaf5, /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf5
+// Processing scaf4, /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf4
+// Processing scafMT, /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scafMT
+// Processing scaf6, /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf6
+// Processing scaf1, /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf1
+// Processing scaf3, /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf3
+// Processing scaf7, /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM/scaf7
+
+[05/14/26 19:50:43]: Converting to GFF3 and collecting all EVM results

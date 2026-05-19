@@ -1,0 +1,119 @@
+[05/14/26 23:33:59]: /opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/funannotate update -i annotation/CDA1_20250504 --cpus 24 --left lib/RNASeq/Debaryomyces_hansenii_R1.fq.gz --right lib/RNASeq/Debaryomyces_hansenii_R2.fq.gz --pasa_db mysql --max_intronlen 3000
+
+[05/14/26 23:33:59]: OS: Rocky Linux 8.10, 256 cores, ~ 528 GB RAM. Python: 3.8.15
+[05/14/26 23:33:59]: Running 1.8.17
+[05/14/26 23:34:00]: fasta version=36.3.8g path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/fasta
+[05/14/26 23:34:00]: minimap2 version=2.26-r1175 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/minimap2
+[05/14/26 23:34:00]: tbl2asn version=25.8 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/tbl2asn
+[05/14/26 23:34:00]: hisat2 version=2.2.1 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/hisat2
+[05/14/26 23:34:00]: hisat2-build version=NA path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/hisat2-build
+[05/14/26 23:34:00]: kallisto version=0.46.1 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/kallisto
+[05/14/26 23:34:00]: Trinity version=2.8.5 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/Trinity
+[05/14/26 23:34:00]: bedtools version=bedtools v2.31.1 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/bedtools
+[05/14/26 23:34:00]: java version=17.0.3-internal path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/java
+[05/14/26 23:34:00]: /rhome/jstajich/.pasa/Launch_PASA_pipeline.pl version=NA path=/rhome/jstajich/.pasa/Launch_PASA_pipeline.pl
+[05/14/26 23:34:00]: /rhome/jstajich/.pasa/bin/seqclean version=NA path=/rhome/jstajich/.pasa/bin/seqclean
+[05/14/26 23:34:00]: trimmomatic version=0.39 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/trimmomatic
+[05/14/26 23:34:00]: minimap2 version=2.26-r1175 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/minimap2
+[05/14/26 23:34:00]: blat version=BLAT v37x1 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/blat
+[05/14/26 23:34:00]: No NCBI SBT file given, will use default, for NCBI submissions pass one here '--sbt'
+[05/14/26 23:34:00]: Found relevant files in annotation/CDA1_20250504/training, will re-use them:
+	GFF3: annotation/CDA1_20250504/predict_results/Debaryomyces_hansenii_CDA1.gff3
+	Genome: annotation/CDA1_20250504/predict_results/Debaryomyces_hansenii_CDA1.scaffolds.fa
+	Forward reads: annotation/CDA1_20250504/training/left.fq.gz
+	Reverse reads: annotation/CDA1_20250504/training/right.fq.gz
+	Forward Q-trimmed reads: annotation/CDA1_20250504/training/trimmomatic/trimmed_left.fastq.gz
+	Reverse Q-trimmed reads: annotation/CDA1_20250504/training/trimmomatic/trimmed_right.fastq.gz
+	Forward normalized reads: annotation/CDA1_20250504/training/normalize/left.norm.fq
+	Reverse normalized reads: annotation/CDA1_20250504/training/normalize/right.norm.fq
+	Trinity results: annotation/CDA1_20250504/training/funannotate_train.trinity-GG.fasta
+	BAM alignments: annotation/CDA1_20250504/training/funannotate_train.coordSorted.bam
+	StringTie GTF: annotation/CDA1_20250504/training/funannotate_train.stringtie.gtf
+[05/14/26 23:34:04]: Reannotating Debaryomyces hansenii, NCBI accession: None
+[05/14/26 23:34:04]: Previous annotation consists of: 6,035 protein coding gene models and 223 non-coding gene models
+[05/14/26 23:34:04]: Existing annotation: locustag=AC24UF_ genenumber=6258
+[05/14/26 23:34:04]: Input reads: ('annotation/CDA1_20250504/training/left.fq.gz', 'annotation/CDA1_20250504/training/right.fq.gz', None)
+[05/14/26 23:34:04]: Quality trimmed reads: ('annotation/CDA1_20250504/training/trimmomatic/trimmed_left.fastq.gz', 'annotation/CDA1_20250504/training/trimmomatic/trimmed_right.fastq.gz', None)
+[05/14/26 23:34:04]: FASTQ headers seem compatible with Trinity
+[05/14/26 23:34:04]: Normalized reads: ('annotation/CDA1_20250504/training/normalize/left.norm.fq', 'annotation/CDA1_20250504/training/normalize/right.norm.fq', None)
+[05/14/26 23:34:04]: Long reads: (None, None, None)
+[05/14/26 23:34:04]: Long reads FASTA format: (None, None, None)
+[05/14/26 23:34:04]: Long SeqCleaned reads: (None, None, None)
+[05/14/26 23:34:04]: Existing BAM alignments found: annotation/CDA1_20250504/update_misc/trinity.alignments.bam, annotation/CDA1_20250504/update_misc/transcript.alignments.bam
+[05/14/26 23:34:04]: Running PASA alignment step using 12,794 transcripts
+[05/14/26 23:34:04]: /rhome/jstajich/.pasa/Launch_PASA_pipeline.pl -c /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/pasa/alignAssembly.txt -r -C -R -g /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/genome.fa --IMPORT_CUSTOM_ALIGNMENTS /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/trinity.alignments.gff3 -T -t /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/trinity.fasta.clean -u /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/trinity.fasta --stringent_alignment_overlap 30.0 --TRANSDECODER --MAX_INTRON_LENGTH 3000 --CPU 24 --ALIGNERS blat --trans_gtf /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/funannotate_train.stringtie.gtf
+[05/14/26 23:46:35]: Running PASA annotation comparison step 1
+[05/14/26 23:46:35]: /rhome/jstajich/.pasa/Launch_PASA_pipeline.pl -c /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/pasa/annotCompare.txt -g /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/genome.fa -t /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/trinity.fasta.clean -A -L --CPU 24 --annots /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/genome.gff3
+[05/14/26 23:50:32]: Running PASA annotation comparison step 2
+[05/14/26 23:50:32]: /rhome/jstajich/.pasa/Launch_PASA_pipeline.pl -c /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/pasa/annotCompare.txt -g /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/genome.fa -t /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/trinity.fasta.clean -A -L --CPU 24 --annots /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/pasa/Debaryomyces_hansenii_CDA1_pasa.gene_structures_post_PASA_updates.3896354.gff3
+[05/14/26 23:54:24]: copying final PASA GFF3 to output: annotation/CDA1_20250504/update_misc/pasa/Debaryomyces_hansenii_CDA1_pasa.gene_structures_post_PASA_updates.108739.gff3
+[05/14/26 23:54:24]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[05/14/26 23:54:24]: Building Kallisto index
+[05/14/26 23:54:24]: /rhome/jstajich/.pasa/misc_utilities/gff3_file_to_proteins.pl annotation/CDA1_20250504/update_misc/pasa_final.gff3 annotation/CDA1_20250504/update_misc/genome.fa cDNA
+[05/14/26 23:54:27]: 
+
+[05/14/26 23:54:27]: kallisto index -i annotation/CDA1_20250504/update_misc/getBestModel/bestModel annotation/CDA1_20250504/update_misc/getBestModel/transcripts.fa
+[05/14/26 23:54:46]: 
+[build] loading fasta file annotation/CDA1_20250504/update_misc/getBestModel/transcripts.fa
+[build] k-mer length: 31
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 9281 contigs and contains 9168615 k-mers 
+
+
+[05/14/26 23:54:46]: Mapping reads using pseudoalignment in Kallisto
+[05/14/26 23:54:46]: kallisto quant -i annotation/CDA1_20250504/update_misc/getBestModel/bestModel -o annotation/CDA1_20250504/update_misc/getBestModel/kallisto --plaintext -t 24 annotation/CDA1_20250504/training/trimmomatic/trimmed_left.fastq.gz annotation/CDA1_20250504/training/trimmomatic/trimmed_right.fastq.gz
+[05/15/26 00:15:09]: 
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 6,095
+[index] number of k-mers: 9,168,615
+[index] number of equivalence classes: 6,531
+[quant] running in paired-end mode
+[quant] will process pair 1: annotation/CDA1_20250504/training/trimmomatic/trimmed_left.fastq.gz
+                             annotation/CDA1_20250504/training/trimmomatic/trimmed_right.fastq.gz
+[quant] finding pseudoalignments for the reads ... done
+[quant] processed 372,903,937 reads, 241,765,229 reads pseudoaligned
+[quant] estimated average fragment length: 246.083
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 411 rounds
+
+
+[05/15/26 00:15:09]: Parsing Kallisto results. Keeping alt-splicing transcripts if expressed at least 10.0% of highest transcript per locus.
+[05/15/26 00:15:09]: Wrote 6,052 transcripts derived from 6,037 protein coding loci.
+[05/15/26 00:15:09]: bedtools intersect -sorted -v -a /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/genome.trna.gff3.sorted.gff3 -b /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/update_misc/bestmodels.gff3.sorted.gff3
+[05/15/26 00:15:13]: Validating gene models (renaming, checking translations, filtering, etc)
+[05/15/26 00:15:15]: Writing 6,234 loci to TBL format: dropped 0 overlapping, 2 too short, and 0 frameshift gene models
+[05/15/26 00:15:15]: Converting to Genbank format
+[05/15/26 00:15:15]: /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/bin/python3.8 /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/aux_scripts/tbl2asn_parallel.py -i annotation/CDA1_20250504/update_misc/tbl2asn/genome.tbl -f annotation/CDA1_20250504/update_misc/genome.fa -o annotation/CDA1_20250504/update_misc/tbl2asn --sbt /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/config/test.sbt -d annotation/CDA1_20250504/update_results/Debaryomyces_hansenii_CDA1.discrepency.report.txt -s Debaryomyces hansenii -t -l paired-ends -v 1 -c 24 --strain CDA1 --gcode 12
+[05/15/26 00:15:32]: Collecting final annotation files
+[05/15/26 00:15:40]: Comparing original annotation to updated
+ original: annotation/CDA1_20250504/predict_results/Debaryomyces_hansenii_CDA1.gff3
+ updated: annotation/CDA1_20250504/update_results/Debaryomyces_hansenii_CDA1.gff3
+[05/15/26 00:16:02]: Updated annotation complete:
+-------------------------------------------------------
+Total Gene Models:	6,234
+Total transcripts:	6,250
+New Gene Models:	12
+No Change:		4,553
+Update UTRs:		1,667
+Exons Changed:		2
+Exons/CDS Changed:	0
+Dropped Models:		0
+CDS AED:		0.002
+mRNA AED:		0.029
+-------------------------------------------------------
+[05/15/26 00:16:02]: Funannotate update is finished, output files are in the annotation/CDA1_20250504/update_results folder
+[05/15/26 00:16:02]: Your next step might be functional annotation, suggested commands:
+-------------------------------------------------------
+Run InterProScan (Docker required): 
+funannotate iprscan -i annotation/CDA1_20250504 -m docker -c 24
+
+Run antiSMASH: 
+funannotate remote -i annotation/CDA1_20250504 -m antismash -e youremail@server.edu
+
+Annotate Genome: 
+funannotate annotate -i annotation/CDA1_20250504 --cpus 24 --sbt yourSBTfile.txt
+-------------------------------------------------------
+                

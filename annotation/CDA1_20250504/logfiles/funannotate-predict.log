@@ -1,0 +1,89 @@
+[05/14/26 19:45:12]: /opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/funannotate predict --keep_no_stops --SeqCenter DHMC -i input_clean_genomes/CDA1_20250504.masked.fasta -o annotation/CDA1_20250504 -s Debaryomyces hansenii --strain CDA1 --AUGUSTUS_CONFIG_PATH /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/config/ --cpus 24 --min_training_models 50 --max_intronlen 1200 --name AC24UF --min_protlen 30 --tmpdir /scratch/jstajich/24134752 --busco_db saccharomycetes_odb10 --table 12
+
+[05/14/26 19:45:12]: OS: Rocky Linux 8.10, 256 cores, ~ 1057 GB RAM. Python: 3.8.15
+[05/14/26 19:45:12]: Running funannotate v1.8.17
+[05/14/26 19:45:12]: GeneMark path: /opt/linux/rocky/8.x/x86_64/pkgs/genemarkESET/4.72_lic
+[05/14/26 19:45:14]: Full path to gmes_petap.pl: /opt/linux/rocky/8.x/x86_64/pkgs/genemarkESET/4.72_lic/gmes_petap.pl
+[05/14/26 19:45:14]: GeneMark appears to be functional? True
+[05/14/26 19:45:16]: exonerate version=exonerate 2.4.0 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/exonerate
+[05/14/26 19:45:16]: diamond version=2.1.8 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/diamond
+[05/14/26 19:45:16]: tbl2asn version=25.8 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/tbl2asn
+[05/14/26 19:45:16]: bedtools version=bedtools v2.31.1 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/bedtools
+[05/14/26 19:45:16]: augustus version=3.5.0 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/augustus
+[05/14/26 19:45:16]: etraining version=NA path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/etraining
+[05/14/26 19:45:16]: tRNAscan-SE version=2.0.12 (Nov 2022) path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/tRNAscan-SE
+[05/14/26 19:45:16]: bam2hints version=NA path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/bam2hints
+[05/14/26 19:45:16]: minimap2 version=2.26-r1175 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/minimap2
+[05/14/26 19:45:16]: $AUGUSTUS_CONFIG_PATH=/bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/config/
+[05/14/26 19:45:16]: Found training files, will re-use these files:
+  --rna_bam annotation/CDA1_20250504/training/funannotate_train.coordSorted.bam
+  --pasa_gff annotation/CDA1_20250504/training/funannotate_train.pasa.gff3
+  --stringtie annotation/CDA1_20250504/training/funannotate_train.stringtie.gtf
+  --transcript_alignments annotation/CDA1_20250504/training/funannotate_train.transcripts.gff3
+[05/14/26 19:45:17]: {'augustus': 1, 'hiq': 2, 'genemark': 1, 'pasa': 6, 'codingquarry': 2, 'snap': 1, 'glimmerhmm': 1, 'proteins': 1, 'transcripts': 1}
+[05/14/26 19:45:21]: {'augustus': 'pasa', 'genemark': 'selftraining', 'snap': 'pasa', 'glimmerhmm': 'pasa', 'codingquarry': 'rna-bam'}
+[05/14/26 19:45:21]: Parsed training data, run ab-initio gene predictors as follows:
+[05/14/26 19:45:21]: augustus --species=anidulans --proteinprofile=/bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/config/EOG092C0B3U.prfl /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/config/busco_test.fa
+[05/14/26 19:45:22]: perl /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/opt/evidencemodeler-1.1.1/EvmUtils/gff3_gene_prediction_file_validator.pl /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/pasa_predictions.gff3
+[05/14/26 19:45:22]: {'augustus': 1, 'hiq': 2, 'genemark': 1, 'pasa': 6, 'codingquarry': 2, 'snap': 1, 'glimmerhmm': 1, 'proteins': 1, 'transcripts': 1}
+[05/14/26 19:45:25]: Loading genome assembly and parsing soft-masked repetitive sequences
+[05/14/26 19:45:26]: Genome loaded: 8 scaffolds; 12,390,982 bp; 5.62% repeats masked
+[05/14/26 19:45:26]: Parsed 11,974 transcript alignments from: annotation/CDA1_20250504/training/funannotate_train.transcripts.gff3
+[05/14/26 19:45:26]: Creating transcript EVM alignments and Augustus transcripts hintsfile
+[05/14/26 19:45:26]: Existing RNA-seq BAM hints found: annotation/CDA1_20250504/predict_misc/hints.BAM.gff
+[05/14/26 19:45:32]: Existing protein alignments found: annotation/CDA1_20250504/predict_misc/protein_alignments.gff3
+[05/14/26 19:45:33]: join_mult_hints.pl
+[05/14/26 19:45:33]: Existing GeneMark annotation found: annotation/CDA1_20250504/predict_misc/genemark.gff
+[05/14/26 19:45:33]: perl /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/opt/evidencemodeler-1.1.1/EvmUtils/misc/augustus_GFF3_to_EVM_GFF3.pl annotation/CDA1_20250504/predict_misc/genemark.gff
+[05/14/26 19:45:34]: 5,620 predictions from GeneMark
+[05/14/26 19:45:34]: Filtering PASA data for suitable training set
+[05/14/26 19:45:35]: /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/aux_scripts/filterGenemark.pl /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/pasa.training.tmp.gtf /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/hints.ALL.gff
+[05/14/26 19:45:37]: 3,205 PASA genes; 333 have multi-CDS; 1,173 from filterGeneMark; 123 have multi-CDS
+[05/14/26 19:45:37]: filterGeneMark GTF filter set to True; require genes with multiple CDS set to False
+[05/14/26 19:45:37]: diamond makedb --in /scratch/jstajich/24134752/augustus.training.proteins.fa --db /scratch/jstajich/24134752/aug_training.dmnd
+[05/14/26 19:45:37]: diamond blastp --query /scratch/jstajich/24134752/augustus.training.proteins.fa --db /scratch/jstajich/24134752/aug_training.dmnd --more-sensitive -o /scratch/jstajich/24134752/aug.blast.txt -f 6 qseqid sseqid pident --query-cover 80 --subject-cover 80 --id 80 --no-self-hits
+[05/14/26 19:45:45]: 50 models fail blast identity threshold
+[05/14/26 19:45:45]: 2,082 models will be ignored for training Augustus
+[05/14/26 19:45:45]: 1,009 of 3,205 models pass training parameters
+[05/14/26 19:45:46]: Existing Augustus annotations found: annotation/CDA1_20250504/predict_misc/augustus.gff3
+[05/14/26 19:45:46]: perl /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/opt/evidencemodeler-1.1.1/EvmUtils/misc/augustus_GFF3_to_EVM_GFF3.pl annotation/CDA1_20250504/predict_misc/augustus.gff3
+[05/14/26 19:45:46]: Pulling out high quality Augustus predictions
+[05/14/26 19:45:46]: Found 367 high quality predictions from Augustus (>90% exon evidence)
+[05/14/26 19:45:46]: Using existing CodingQuarry results: annotation/CDA1_20250504/predict_misc/coding_quarry.gff3
+[05/14/26 19:45:46]: 6,354 predictions from CodingQuarry
+[05/14/26 19:45:46]: Directory not copied. Error: [Errno 17] File exists: 'annotation/CDA1_20250504/predict_misc/ab_initio_parameters/codingquarry'
+[05/14/26 19:45:46]: Existing snap predictions found annotation/CDA1_20250504/predict_misc/snap-predictions.gff3
+[05/14/26 19:45:46]: 5,366 predictions from SNAP
+[05/14/26 19:45:46]: Existing GlimmerHMM predictions found: annotation/CDA1_20250504/predict_misc/glimmerhmm-predictions.gff3
+[05/14/26 19:45:46]: 6,165 predictions from GlimmerHMM
+[05/14/26 19:45:46]: Directory not copied. Error: [Errno 17] File exists: 'annotation/CDA1_20250504/predict_misc/ab_initio_parameters/glimmerhmm'
+[05/14/26 19:45:47]: Prediction sources: ['Augustus', 'HiQ', 'CodingQuarry', 'GeneMark', 'GlimmerHMM', 'pasa', 'snap']
+[05/14/26 19:45:47]: Summary of gene models: {'total': 32055, 'Augustus': 4978, 'HiQ': 367, 'CodingQuarry': 6354, 'GeneMark': 5620, 'GlimmerHMM': 6165, 'pasa': 3205, 'snap': 5366}
+[05/14/26 19:45:47]: EVM Weights: {'Augustus': 1, 'HiQ': 2, 'CodingQuarry': 2, 'GeneMark': 1, 'GlimmerHMM': 1, 'pasa': 6, 'snap': 1, 'proteins': 1, 'transcripts': 1}
+[05/14/26 19:45:47]: Summary of gene models passed to EVM (weights):
+[05/14/26 19:45:47]: Launching EVM via funannotate-runEVM.py
+[05/14/26 19:45:47]: /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/bin/python3.8 /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/aux_scripts/funannotate-runEVM.py -w /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/weights.evm.txt -c 24 -g /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/gene_predictions.gff3 -d /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/EVM -f /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/genome.softmasked.fa -l annotation/CDA1_20250504/logfiles/funannotate-EVM.log -m 10 -i 1500 -o /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/evm.round1.gff3 --EVM_HOME /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/opt/evidencemodeler-1.1.1 -p /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/protein_alignments.gff3 -t /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/transcript_alignments.gff3
+[05/14/26 19:50:43]: 6,209 total gene models from EVM
+[05/14/26 19:50:43]: Generating protein fasta files from 6,209 EVM models
+[05/14/26 19:50:46]: now filtering out bad gene models (< 30 aa in length, transposable elements, etc).
+[05/14/26 19:50:46]: diamond blastp --sensitive --query annotation/CDA1_20250504/predict_misc/evm.round1.proteins.fa --threads 24 --out annotation/CDA1_20250504/predict_misc/repeats.xml --db /bigdata/stajichlab/shared/lib/funannotate_db/repeats.dmnd --evalue 1e-10 --max-target-seqs 1 --outfmt 5
+[05/14/26 19:50:54]: bedtools intersect -sorted -f 0.9 -a /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/evm.round1.gff3.sorted.gff -b /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/repeatmasker.bed.sorted.bed
+[05/14/26 19:50:54]: Found 174 gene models to remove: 0 too short; 0 span gaps; 174 transposable elements
+[05/14/26 19:50:54]: 6,035 gene models remaining
+[05/14/26 19:50:54]: Predicting tRNAs
+[05/14/26 19:50:54]: bedtools intersect -sorted -v -a /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/trnascan.gff3.sorted.gff3 -b /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/evm.cleaned.gff3.sorted.gff3 /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/assembly-gaps.bed.sorted.gff3
+[05/14/26 19:50:54]: 223 tRNAscan models are valid (non-overlapping)
+[05/14/26 19:50:54]: Generating GenBank tbl annotation file
+[05/14/26 19:51:04]: Collecting final annotation files for 6,258 total gene models
+[05/14/26 19:51:04]: Converting to final Genbank format
+[05/14/26 19:51:04]: /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/bin/python3.8 /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/aux_scripts/tbl2asn_parallel.py -i annotation/CDA1_20250504/predict_misc/tbl2asn/genome.tbl -f /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/predict_misc/genome.softmasked.fa -o annotation/CDA1_20250504/predict_misc/tbl2asn --sbt /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/funannotate/1.8.x/lib/python3.8/site-packages/funannotate/config/test.sbt -d annotation/CDA1_20250504/predict_results/Debaryomyces_hansenii_CDA1.discrepency.report.txt -s Debaryomyces hansenii -t -l paired-ends -v 1 -c 24 --strain CDA1 --gcode 12
+[05/14/26 19:51:19]: Funannotate predict is finished, output files are in the annotation/CDA1_20250504/predict_results folder
+[05/14/26 19:51:19]: Your next step to capture UTRs and update annotation using PASA:
+
+  funannotate update -i annotation/CDA1_20250504 --cpus 24
+
+[05/14/26 19:51:19]: Training parameters file saved: annotation/CDA1_20250504/predict_results/debaryomyces_hansenii_cda1.parameters.json
+[05/14/26 19:51:19]: Add species parameters to database:
+
+  funannotate species -s debaryomyces_hansenii_cda1 -a annotation/CDA1_20250504/predict_results/debaryomyces_hansenii_cda1.parameters.json
+

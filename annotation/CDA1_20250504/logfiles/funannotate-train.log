@@ -1,0 +1,103 @@
+[05/13/26 08:56:16]: /opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/funannotate train -i input_clean_genomes/CDA1_20250504.masked.fasta -o annotation/CDA1_20250504 --jaccard_clip --species  --strain CDA1 --cpus 16 --memory 24G --header_length 24 --left lib/RNASeq/Debaryomyces_hansenii_R1.fq.gz --right lib/RNASeq/Debaryomyces_hansenii_R2.fq.gz --pasa_db mysql --no-progress --min_coverage 4
+
+[05/13/26 08:56:16]: OS: Rocky Linux 8.10, 256 cores, ~ 1057 GB RAM. Python: 3.8.15
+[05/13/26 08:56:16]: Running 1.8.17
+[05/13/26 08:56:18]: fasta version=36.3.8g path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/fasta
+[05/13/26 08:56:18]: minimap2 version=2.26-r1175 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/minimap2
+[05/13/26 08:56:18]: hisat2 version=2.2.1 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/hisat2
+[05/13/26 08:56:18]: hisat2-build version=NA path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/hisat2-build
+[05/13/26 08:56:18]: Trinity version=2.15.1 path=/opt/linux/rocky/8.x/x86_64/pkgs/trinity-rnaseq/2.15.1/Trinity
+[05/13/26 08:56:18]: java version=17.0.3-internal path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/java
+[05/13/26 08:56:18]: kallisto version=0.46.1 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/kallisto
+[05/13/26 08:56:18]: /rhome/jstajich/.pasa/Launch_PASA_pipeline.pl version=NA path=/rhome/jstajich/.pasa/Launch_PASA_pipeline.pl
+[05/13/26 08:56:18]: /rhome/jstajich/.pasa/bin/seqclean version=NA path=/rhome/jstajich/.pasa/bin/seqclean
+[05/13/26 08:56:18]: trimmomatic version=0.39 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/trimmomatic
+[05/13/26 08:56:18]: minimap2 version=2.26-r1175 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/minimap2
+[05/13/26 08:56:18]: blat version=BLAT v37x1 path=/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/blat
+[05/13/26 08:56:18]: Input reads: ('annotation/CDA1_20250504/training/left.fq.gz', 'annotation/CDA1_20250504/training/right.fq.gz', None)
+[05/13/26 08:56:18]: Quality trimmed reads: ('annotation/CDA1_20250504/training/trimmomatic/trimmed_left.fastq.gz', 'annotation/CDA1_20250504/training/trimmomatic/trimmed_right.fastq.gz', None)
+[05/13/26 08:56:18]: FASTQ headers seem compatible with Trinity
+[05/13/26 08:56:18]: Running read normalization with Trinity
+[05/13/26 08:56:18]: /opt/linux/rocky/8.x/x86_64/pkgs/trinity-rnaseq/2.15.1/util/insilico_read_normalization.pl --PARALLEL_STATS --JM 24G --min_cov 4 --max_cov 50 --seqType fq --output annotation/CDA1_20250504/training/normalize --CPU 16 --pairs_together --left annotation/CDA1_20250504/training/trimmomatic/trimmed_left.fastq.gz --right annotation/CDA1_20250504/training/trimmomatic/trimmed_right.fastq.gz
+[05/13/26 13:21:05]: Normalized reads: ('annotation/CDA1_20250504/training/normalize/left.norm.fq', 'annotation/CDA1_20250504/training/normalize/right.norm.fq', None)
+[05/13/26 13:21:05]: Long reads: (None, None, None)
+[05/13/26 13:21:05]: Long reads FASTA format: (None, None, None)
+[05/13/26 13:21:05]: Long SeqCleaned reads: (None, None, None)
+[05/13/26 15:00:50]: Running StringTie on Hisat2 coordsorted BAM
+[05/13/26 15:00:50]: stringtie -p 16 annotation/CDA1_20250504/training/hisat2.coordSorted.bam
+[05/13/26 15:01:02]: Removing poly-A sequences from trinity transcripts using seqclean
+[05/13/26 15:01:02]: /rhome/jstajich/.pasa/bin/seqclean trinity.fasta -c 16
+[05/13/26 15:01:07]: seqclean running options: 
+seqclean trinity.fasta -c 16
+ Standard log file: seqcl_trinity.fasta.log
+ Error log file:    err_seqcl_trinity.fasta.log
+ Using 16 CPUs for cleaning
+-= Rebuilding trinity.fasta cdb index =-
+ Launching actual cleaning process:
+ psx -p 16  -n 1000  -i trinity.fasta -d cleaning -C '/bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/trinity.fasta:ANLMS100:::11:0' -c '/bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/PASA/2.5.2/bin/seqclean.psx'
+Collecting cleaning reports
+
+**************************************************
+Sequences analyzed:     12794
+-----------------------------------
+                   valid:     12794  (2118 trimmed)
+                 trashed:         0
+**************************************************
+Output file containing only valid and trimmed sequences: trinity.fasta.clean
+For trimming and trashing details see cleaning report  : trinity.fasta.cln
+--------------------------------------------------
+seqclean (trinity.fasta) finished on machine r28
+ in /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation, without a detectable error.
+
+[05/13/26 15:01:07]: minimap2 -ax splice -t 16 --cs -u b -G 3000 annotation/CDA1_20250504/training/genome.fasta annotation/CDA1_20250504/training/trinity.fasta.clean | samtools sort --reference annotation/CDA1_20250504/training/genome.fasta -@ 4 -o annotation/CDA1_20250504/training/trinity.alignments.bam -
+[05/13/26 15:01:10]: Converting transcript alignments to GFF3 format
+[05/13/26 15:01:13]: Converting Trinity transcript alignments to GFF3 format
+[05/13/26 15:01:16]: Running PASA alignment step using 12,794 transcripts
+[05/13/26 15:01:16]: /rhome/jstajich/.pasa/Launch_PASA_pipeline.pl -c /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/pasa/alignAssembly.txt -r -C -R -g /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/genome.fasta --IMPORT_CUSTOM_ALIGNMENTS /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/trinity.alignments.gff3 -T -t /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/trinity.fasta.clean -u /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/trinity.fasta --stringent_alignment_overlap 30.0 --TRANSDECODER --ALT_SPLICE --MAX_INTRON_LENGTH 3000 --CPU 16 --PASACONF /scratch/jstajich/24052809/conf/pasa-local-r28.config.txt --ALIGNERS blat --trans_gtf /bigdata/stajichlab/shared/projects/HoganLab_Projects/HoganLab_Dhansenii_CDA1_annotation/annotation/CDA1_20250504/training/funannotate_train.stringtie.gtf
+[05/13/26 15:13:41]: PASA assigned 5,204 transcripts to 4,929 loci (genes)
+[05/13/26 15:13:41]: Getting PASA models for training with TransDecoder
+[05/13/26 15:13:41]: /rhome/jstajich/.pasa/scripts/pasa_asmbls_to_training_set.dbi --pasa_transcripts_fasta CDA1_20250504_masked_CDA1_pasa.assemblies.fasta --pasa_transcripts_gff3 CDA1_20250504_masked_CDA1_pasa.pasa_assemblies.gff3
+[05/13/26 15:16:54]: PASA finished. PASAweb accessible via: localhost:port/cgi-bin/index.cgi?db=CDA1_20250504_masked_CDA1_pasa
+[05/13/26 15:16:54]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[05/13/26 15:16:54]: Building Kallisto index
+[05/13/26 15:16:54]: /rhome/jstajich/.pasa/misc_utilities/gff3_file_to_proteins.pl annotation/CDA1_20250504/training/pasa.step1.gff3 annotation/CDA1_20250504/training/genome.fasta cDNA
+[05/13/26 15:16:57]: 
+
+[05/13/26 15:16:57]: kallisto index -i annotation/CDA1_20250504/training/getBestModel/bestModel annotation/CDA1_20250504/training/getBestModel/transcripts.fa
+[05/13/26 15:17:24]: 
+[build] loading fasta file annotation/CDA1_20250504/training/getBestModel/transcripts.fa
+[build] k-mer length: 31
+[build] warning: clipped off poly-A tail (longer than 10)
+        from 5 target sequences
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 11180 contigs and contains 10871090 k-mers 
+
+
+[05/13/26 15:17:24]: Mapping reads using pseudoalignment in Kallisto
+[05/13/26 15:17:24]: kallisto quant -i annotation/CDA1_20250504/training/getBestModel/bestModel -o annotation/CDA1_20250504/training/getBestModel/kallisto --plaintext -t 16 annotation/CDA1_20250504/training/trimmomatic/trimmed_left.fastq.gz annotation/CDA1_20250504/training/trimmomatic/trimmed_right.fastq.gz
+[05/13/26 15:34:28]: 
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 7,845
+[index] number of k-mers: 10,871,090
+[index] number of equivalence classes: 12,134
+[quant] running in paired-end mode
+[quant] will process pair 1: annotation/CDA1_20250504/training/trimmomatic/trimmed_left.fastq.gz
+                             annotation/CDA1_20250504/training/trimmomatic/trimmed_right.fastq.gz
+[quant] finding pseudoalignments for the reads ... done
+[quant] processed 372,903,937 reads, 231,125,557 reads pseudoaligned
+[quant] estimated average fragment length: 267.454
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,013 rounds
+
+
+[05/13/26 15:34:28]: Parsing expression value results. Keeping best transcript at each locus.
+[05/13/26 15:35:02]: Wrote 3,205 PASA gene models
+[05/13/26 15:35:02]: PASA database name: CDA1_20250504.masked_CDA1
+[05/13/26 15:35:02]: Trinity/PASA has completed, you are now ready to run funanotate predict, for example:
+
+  funannotate predict -i input_clean_genomes/CDA1_20250504.masked.fasta \
+            -o annotation/CDA1_20250504 -s "CDA1_20250504.masked" --strain CDA1 --cpus 16
+
