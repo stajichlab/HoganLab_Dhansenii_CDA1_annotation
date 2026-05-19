@@ -1,0 +1,52 @@
+exon stop,1
+exon_i0 donor_0,1
+exon_i1 donor_1,1
+exon_i2 donor_2,1
+exon_m0 donor_0,1
+exon_m1 donor_1,1
+exon_m2 donor_2,1
+exon_t stop,1
+start exon,0.865251 exon_i0,0.0490947 exon_i1,0.0602368 exon_i2,0.0254178
+stop intergenic,1
+donor_0 spacer5_0,1
+donor_1 spacer5_1,1
+donor_2 spacer5_2,1
+acceptor_0 exon_m0,0.0337079 exon_m1,0.0696629 exon_m2,0.0269663 exon_t,0.869663
+acceptor_1 exon_m0,0.0337079 exon_m1,0.0696629 exon_m2,0.0269663 exon_t,0.869663
+acceptor_2 exon_m0,0.0337079 exon_m1,0.0696629 exon_m2,0.0269663 exon_t,0.869663
+branch_0 spacer3_0,1
+branch_1 spacer3_1,1
+branch_2 spacer3_2,1
+spacer3_0 acceptor_0,1
+spacer3_1 acceptor_1,1
+spacer3_2 acceptor_2,1
+spacer5_0 branch_0,1
+spacer5_1 branch_1,1
+spacer5_2 branch_2,1
+r_exon r_start,1
+r_exon_i r_start,1
+r_exon_m0 r_acceptor_0,1
+r_exon_m1 r_acceptor_1,1
+r_exon_m2 r_acceptor_2,1
+r_exon_t0 r_acceptor_0,1
+r_exon_t1 r_acceptor_1,1
+r_exon_t2 r_acceptor_2,1
+r_start intergenic,1
+r_stop r_exon,0.865251 r_exon_t0,0.034849 r_exon_t1,0.0278792 r_exon_t2,0.0720212
+r_donor_0 r_exon_i,0.869663 r_exon_m0,0.0337079 r_exon_m1,0.0269663 r_exon_m2,0.0696629
+r_donor_1 r_exon_i,0.869663 r_exon_m0,0.0337079 r_exon_m1,0.0269663 r_exon_m2,0.0696629
+r_donor_2 r_exon_i,0.869663 r_exon_m0,0.0337079 r_exon_m1,0.0269663 r_exon_m2,0.0696629
+r_acceptor_0 r_spacer3_0,1
+r_acceptor_1 r_spacer3_1,1
+r_acceptor_2 r_spacer3_2,1
+r_branch_0 r_spacer5_0,1
+r_branch_1 r_spacer5_1,1
+r_branch_2 r_spacer5_2,1
+r_spacer3_0 r_branch_0,1
+r_spacer3_1 r_branch_1,1
+r_spacer3_2 r_branch_2,1
+r_spacer5_0 r_donor_0,1
+r_spacer5_1 r_donor_1,1
+r_spacer5_2 r_donor_2,1
+intergenic start,0.5 r_stop,0.5
+contig intergenic,1
