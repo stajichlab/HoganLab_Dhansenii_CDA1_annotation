@@ -1,0 +1,121 @@
+{
+    "format": "annotation",
+    "command": "/opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.x/bin/funannotate annotate -i annotation/CDA1_20250504 --cpus 2 --tmpdir /scratch/jstajich/24173158 --species Debaryomyces hansenii --strain CDA1 --sbt lib/sbt/Debaryomyces_hansenii_CDA1.sbt -o annotation/CDA1_20250504 --busco_db saccharomycetes_odb10 --rename AC24UF",
+    "organism": "Debaryomyces_hansenii_CDA1",
+    "software": {
+        "name": "funannotate",
+        "version": "1.8.17.dev119+ga297a13",
+        "date": "2026-05-18",
+        "resources": {
+            "merops": {
+                "type": "diamond",
+                "version": "12.5",
+                "date": "2023-01-19",
+                "num-records": "5098"
+            },
+            "uniprot": {
+                "type": "diamond",
+                "version": "2025_04",
+                "date": "2025-10-08",
+                "num-records": "573661"
+            },
+            "dbCAN": {
+                "type": "hmmer3",
+                "version": "14.0",
+                "date": "2025-08-26",
+                "num-records": "699"
+            },
+            "pfam": {
+                "type": "hmmer3",
+                "version": "38.0",
+                "date": "2025-07",
+                "num-records": "25545"
+            },
+            "repeats": {
+                "type": "diamond",
+                "version": "1.0",
+                "date": "2025-01-21",
+                "num-records": "11950"
+            },
+            "go": {
+                "type": "text",
+                "version": "2025-06-01",
+                "date": "2025-06-01",
+                "num-records": "48101"
+            },
+            "mibig": {
+                "type": "diamond",
+                "version": "1.4",
+                "date": "2025-01-21",
+                "num-records": "31023"
+            },
+            "interpro": {
+                "type": "xml",
+                "version": "105.0",
+                "date": "2025-04-24",
+                "num-records": "48003"
+            },
+            "busco_outgroups": {
+                "type": "outgroups",
+                "version": "1.0",
+                "date": "2025-06-10",
+                "num-records": "8"
+            },
+            "gene2product": {
+                "type": "text",
+                "version": "1.98",
+                "date": "2026-05-18",
+                "num-records": "34505"
+            }
+        }
+    },
+    "assembly": {
+        "num_contigs": 8,
+        "length": 12390982,
+        "mean_length": 1548872.75,
+        "N50": 2025950,
+        "L50": 3,
+        "N90": 1339928,
+        "L90": 7,
+        "GC_content": 36.37
+    },
+    "annotation": {
+        "genes": 6234,
+        "common_name": 3236,
+        "mRNA": 6052,
+        "tRNA": 198,
+        "ncRNA": 0,
+        "rRNA": 0,
+        "avg_gene_length": 1532.71,
+        "transcript-level": {
+            "CDS_transcripts": 6052,
+            "CDS_five_utr": 0,
+            "CDS_three_utr": 238,
+            "CDS_no_utr": 4358,
+            "CDS_five_three_utr": 1456,
+            "CDS_complete": 6051,
+            "CDS_no-start": 1,
+            "CDS_no-stop": 0,
+            "CDS_no-start_no-stop": 0,
+            "total_exons": 9782,
+            "total_cds_exons": 6565,
+            "multiple_exon_transcript": 494,
+            "single_exon_transcript": 5558,
+            "avg_exon_length": 0,
+            "avg_protein_length": 487.89,
+            "functional": {
+                "go_terms": 4787,
+                "interproscan": 5374,
+                "eggnog": 5880,
+                "pfam": 4920,
+                "cazyme": 152,
+                "merops": 195,
+                "busco": 2127,
+                "secretion": 265
+            },
+            "pct_exon_overlap_protein_evidence": 12.91,
+            "pct_exon_overlap_transcript_evidence": 40.53,
+            "avg_exon_lenth": 649.01
+        }
+    }
+}
